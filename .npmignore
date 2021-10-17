@@ -1,0 +1,8 @@
+.git
+.github
+.npmrc
+.editorconfig
+*.test.ts
+npm-debug.log
+jest.config.js
+rollup.config.js
