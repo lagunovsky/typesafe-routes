@@ -1,6 +1,6 @@
 {
   "name": "@lagunovsky/typesafe-routes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Abstracts your routes behind a type-safe object.",
   "author": "Ivan Lagunovsky",
   "license": "MIT",
@@ -18,11 +18,8 @@
   ],
   "scripts": {
     "build": "rollup -c",
-    "prepare": "install-peers",
-    "prepublishOnly": "yarn run build",
     "test": "jest"
   },
-  "peerDependencies": {},
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.0.5",
     "@types/jest": "^27.0.2",
