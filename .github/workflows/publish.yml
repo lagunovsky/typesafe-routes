@@ -20,6 +20,7 @@ jobs:
       - name: Publish to NPM
         run: |
           yarn install
+          yarn test
           yarn build
           npm publish --access public
         env:
@@ -34,6 +35,7 @@ jobs:
       - name: Publish to GPR
         run: |
           yarn install
+          yarn test
           yarn build
           npm publish
         env:
