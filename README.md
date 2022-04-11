@@ -38,19 +38,19 @@ const routes = schema({
 })
 ```
 
-| Call | Result |
-|-------------------------------------------|--------------------------|
-| `routes.override.get()`                   | `'/'`                    |
-| `routes.override.deep.get()`              | `'/override'`            |
-| `routes.exception.get()`                  | error                    |
-| `routes.exception.allowed.get()`          | `'/exception/allowed'`   |
-| `routes.dynamic.get()`                    | `'/dynamic'`             |
-| `routes.dynamic('1').get()`               | `'/dynamic/1'`           |
-| `routes.dynamic('1').edit.get()`          | `'/dynamic/1/edit'`      |
-| `routes.dynamic('1').v('1.0.0').get()`    | `'/dynamic/1/v/1.0.0'`   |
-| `routes.deep.get()`                       | `'/deep'`                |
-| `routes.deep.deep.get()`                  | `'/deep/deep'`           |
-| `routes.deep.get('?token=magic')`         | `'/deep?token=magic'`    |
+| Call                                 | Result                 |
+|--------------------------------------|------------------------|
+| `routes.override.get()`              | `'/'`                  |
+| `routes.override.deep.get()`         | `'/override'`          |
+| `routes.exception.get()`             | error                  |
+| `routes.exception.allowed.get()`     | `'/exception/allowed'` |
+| `routes.dynamic.get()`               | `'/dynamic'`           |
+| `routes.dynamic(':id').get()`        | `'/dynamic/:id'`       |
+| `routes.dynamic(1).edit.get()`       | `'/dynamic/1/edit'`    |
+| `routes.dynamic(1).v('1.0.0').get()` | `'/dynamic/1/v/1.0.0'` |
+| `routes.deep.get()`                  | `'/deep'`              |
+| `routes.deep.deep.get()`             | `'/deep/deep'`         |
+| `routes.deep.get('?token=magic')`    | `'/deep?token=magic'`  |
 
 ## API
 

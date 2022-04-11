@@ -1,6 +1,6 @@
 {
   "name": "@lagunovsky/typesafe-routes",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Abstracts your routes behind a type-safe object.",
   "author": "Ivan Lagunovsky",
   "license": "MIT",

@@ -16,13 +16,13 @@ export type BaseDescription = { [key: string]: Description }
 
 export type DynamicDescription = (...args: any[]) => OverrideDescription | ExceptionDescription
 
-export type OverrideDescription = [ string, BaseDescription | DynamicDescription ]
+export type OverrideDescription = [ string | number, BaseDescription | DynamicDescription ]
 
 export type ExceptionDescription = [ null, BaseDescription | DynamicDescription ]
 
 export type Description = BaseDescription | DynamicDescription | OverrideDescription | ExceptionDescription
 
-export type Query = string | ((...args: any[]) => string)
+export type Query = string | number | ((...args: any[]) => string | number)
 
 export type Getter = {
   get: <Q extends Query>(query?: Q) => string

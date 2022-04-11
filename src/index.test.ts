@@ -42,16 +42,16 @@ test('Base', () => {
 
 test('Dynamic', () => {
   const routes = schema({
-    dynamic: (id: string) => [ id, {
+    dynamic: (id: string | number) => [ id, {
       edit: {},
       v: (version: string) => [ version, {} ],
     } ],
   })
 
   expect(routes.dynamic.get()).toBe('/dynamic')
-  expect(routes.dynamic('1').get()).toBe('/dynamic/1')
-  expect(routes.dynamic('1').edit.get()).toBe('/dynamic/1/edit')
-  expect(routes.dynamic('1').v('1.0.0').get()).toBe('/dynamic/1/v/1.0.0')
+  expect(routes.dynamic(':id').get()).toBe('/dynamic/:id')
+  expect(routes.dynamic(1).edit.get()).toBe('/dynamic/1/edit')
+  expect(routes.dynamic(1).v('1.0.0').get()).toBe('/dynamic/1/v/1.0.0')
 })
 
 test('Query', () => {
